@@ -1,0 +1,113 @@
+.testDrive {
+  ion-button {
+    border: 1px solid #ffffff;
+  }
+}
+
+ion-content {
+  background-color: transparent;
+  --background: transparent;
+  --ion-background-color: transparent;
+}
+
+.currentCount {
+  top: 0;
+  position: absolute;
+  font-size: 562px;
+  opacity: 0.1;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.heroLanding {
+  h1 {
+    white-space: break-spaces;
+    font-weight: 800;
+    font-size: 100px;
+  }
+
+  ion-buttons {
+    margin-top: 20px;
+  }
+
+  ion-button {
+    font-size: 20px;
+    height: 45px;
+    padding: 0 10px;
+
+    background-color: #ffffff;
+    color: #000000;
+
+    &:last-child {
+      background-color: #000000;
+      color: #ffffff;
+    }
+  }
+}
+
+.rightDetails {
+  h2 {
+    font-weight: 400;
+    white-space: normal;
+    max-width: 500px;
+  }
+}
+
+ion-progress-bar {
+  max-width: 300px;
+  float: right;
+}
+
+section {
+  height: 100%;
+
+  @media (min-width: 801px) {
+    ion-grid,
+    ion-row {
+      height: 100%;
+
+      ion-col {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &:last-child {
+          * {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .currentCount {
+    font-size: 230px;
+  }
+
+  .heroLanding {
+    h1 {
+      font-size: 40px;
+      max-width: 320px;
+    }
+  }
+}
+@media (min-width: 801px) {
+  .hideOnDestop {
+    display: none;
+  }
+  section,
+  ion-header {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+  .rightDetails {
+    height: 100%;
+
+    
+  }
+}
