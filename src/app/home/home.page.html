@@ -11,7 +11,7 @@
     </ion-buttons>
 
     <ion-buttons slot="primary" class="testDrive">
-      <ion-button> Test Drive </ion-button>
+      <ion-button fill="outline"> Test Drive </ion-button>
     </ion-buttons>
   </ion-toolbar>
 
@@ -27,6 +27,11 @@
   </ion-toolbar>
 </ion-header>
 
+<div class="lottieContainer">
+  <div class=""></div>
+  <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+</div>
+
 <ion-content [fullscreen]="true">
   <!-- landing -->
   <section>
@@ -34,7 +39,7 @@
     <!-- animate elements in -->
     <ion-grid>
       <ion-row>
-        <ion-col size="12" size-lg="6">
+        <ion-col size="12" size-lg="7">
           <ion-item lines="none">
             <ion-label class="heroLanding">
               <strong>
@@ -48,11 +53,12 @@
           </ion-item>
         </ion-col>
 
-        <ion-col size="12" size-lg="6">
+        <ion-col size="12" size-lg="5">
           <ion-item lines="none" class="rightDetails">
             <ion-label>
               <p>001 / 002</p>
-              <h2>Chasing Extreme Dreams In A Twin-Turbo Huracán. The very first street able Super Trofie Widebody
+              <h2>
+                Chasing Extreme Dreams In A Twin-Turbo Huracán. The very first street able Super Trofie Widebody
                 Huracan 1000-2 in the world.
               </h2>
               <ion-progress-bar value="0.5"></ion-progress-bar>

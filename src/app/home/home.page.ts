@@ -13,13 +13,11 @@ export class HomePage implements OnInit, OnDestroy {
   ngOnInit(): void { }
 
   animationItem: AnimationItem;
-  
+
   options: AnimationOptions = {
-    path: '../../assets/main/data.json',
-    autoplay: false,
+    path: '../../assets/json sequence/data.json',
+    autoplay: true,
   };
-
-
 
   animationCreated(animationItem: AnimationItem): void {
     this.animationItem = animationItem;
