@@ -15,6 +15,8 @@ export class HomePage implements OnInit, OnDestroy {
 
   animationItem: AnimationItem;
 
+  scrollCount = 0;
+
   options: AnimationOptions = {
     path: '../../assets/json sequence/data.json',
     autoplay: true,
@@ -39,6 +41,10 @@ export class HomePage implements OnInit, OnDestroy {
   }
 
   error($event) {
+    console.log(event)
+  }
+
+  logScrolling($event) {
     console.log(event)
   }
 

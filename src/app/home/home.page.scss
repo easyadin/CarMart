@@ -5,6 +5,7 @@
 }
 
 ion-header {
+  z-index: 9999999999999999999999999;
   ion-toolbar {
     background-color: transparent;
     --background: transparent;
@@ -95,6 +96,7 @@ ion-content {
     font-weight: 400;
     white-space: normal;
     max-width: 500px;
+    line-height: 27px;
   }
 
   ion-label {
@@ -220,9 +222,37 @@ section {
   }
 }
 
-
 .LottieNotLoaded {
   * {
     color: #000000;
+  }
+}
+
+.currentCount {
+  animation: scaleIn cubic-bezier(0.77, 0, 0.175, 1) 2s;
+  animation-delay: 1s;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(13.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+@keyframes revealUp {
+  0% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
   }
 }

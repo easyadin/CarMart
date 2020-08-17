@@ -30,10 +30,10 @@
 <div class="lottieContainer">
   <div class="" *ngIf="domIsLoaded == true"></div>
   <ng-lottie [options]="options" (animationCreated)="animationCreated($event)" (configReady)="configReady()"
-    (dataReady)="dataReady()" (domLoaded)="domLoaded()"  (error)="error($event)"></ng-lottie>
+    (dataReady)="dataReady()" (domLoaded)="domLoaded()" (error)="error($event)"></ng-lottie>
 </div>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" [scrollEvents]="true" (ionScroll)="logScrolling($event)" >
   <!-- landing -->
   <section>
     <h1 class="currentCount">001</h1>
