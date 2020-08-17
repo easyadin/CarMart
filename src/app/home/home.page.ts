@@ -9,8 +9,9 @@ import { AnimationOptions } from 'ngx-lottie';
 })
 export class HomePage implements OnInit, OnDestroy {
   constructor() { }
-
   ngOnInit(): void { }
+
+  domIsLoaded = false;
 
   animationItem: AnimationItem;
 
@@ -21,6 +22,24 @@ export class HomePage implements OnInit, OnDestroy {
 
   animationCreated(animationItem: AnimationItem): void {
     this.animationItem = animationItem;
+  }
+
+  configReady() {
+    console.log("configReady")
+    this.domIsLoaded = true
+  }
+
+  dataReady() {
+    console.log("dataReady")
+  }
+
+  domLoaded() {
+    console.log("domLoaded")
+
+  }
+
+  error($event) {
+    console.log(event)
   }
 
   ngOnDestroy() {

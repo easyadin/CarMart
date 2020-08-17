@@ -1,6 +1,5 @@
 .testDrive {
   ion-button {
-    border: 1px solid #ffffff;
     --border-color: #fff;
   }
 }
@@ -17,27 +16,30 @@ ion-header {
   }
 }
 
-.lottieContainer {
-  svg {
-    g {
-      image {
-        height: 100vh;
-      }
-    }
+@media (max-width: 1515px) {
+  .leftSlab {
+    display: none;
   }
+}
+
+.lottieContainer {
   width: 100%;
   max-width: 100%;
-
   position: absolute;
   top: 0;
-
+  z-index: -1;
   div {
-    width: 100%;
+    display: block;
     height: 100%;
-    background: transparent radial-gradient(closest-side at 50% 50%, #ffffff 0%, #000000db 100%) 0% 0% no-repeat
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    z-index: 99999999;
+    background: transparent radial-gradient(closest-side at 50% 50%, #ffffff00 0%, #00000091 100%) 0% 0% no-repeat
       padding-box;
-    opacity: 1;
-    backdrop-filter: blur(3px);
+    opacity: 0.8;
+    backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(3px);
   }
 }
@@ -46,11 +48,15 @@ ion-content {
   background-color: transparent;
   --background: transparent;
   --ion-background-color: transparent;
+
+  * {
+    color: #ffffff;
+  }
 }
 
 .currentCount {
   top: 0;
-  position: absolute;
+  position: fixed;
   font-size: 562px;
   opacity: 0.2;
   font-weight: bold;
@@ -73,7 +79,6 @@ ion-content {
   ion-button {
     font-size: 20px;
     height: 45px;
-    padding: 0 10px;
 
     background-color: #ffffff;
     color: #000000;
@@ -97,6 +102,35 @@ ion-content {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+  }
+
+  ion-avatar {
+    width: 190px;
+    height: 150px;
+    border-radius: 0px;
+    --border-radius: 0px;
+    margin-right: 0;
+  }
+
+  ion-buttons {
+    ion-button {
+      width: 100px;
+      height: 150px;
+      background: #fff;
+
+      ion-icon {
+        color: #000000;
+      }
+    }
+  }
+
+  ion-item {
+    float: right;
+    margin-right: 0;
+    display: block;
+    max-width: 324px;
+    place-self: flex-end;
+    --inner-padding-end: 0;
   }
 }
 
@@ -167,5 +201,28 @@ section {
 @media (max-width: 1024px) {
   .heroLanding {
     font-size: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .rightDetails {
+    * {
+      color: #000000;
+    }
+  }
+
+  .heroLanding {
+    ion-button {
+      &:first-child {
+        border: 1px solid #000;
+      }
+    }
+  }
+}
+
+
+.LottieNotLoaded {
+  * {
+    color: #000000;
   }
 }

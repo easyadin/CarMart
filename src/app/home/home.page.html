@@ -1,4 +1,4 @@
-<ion-header [translucent]="true" class="ion-no-border">
+<ion-header [translucent]="true" class="ion-no-border" [ngClass]="domIsLoaded  == false ? 'LottieNotLoaded' : ''">
   <ion-toolbar class="hideOnMobile">
     <ion-title slot="start" class="topTitle">
       <strong>CarMart</strong>
@@ -28,8 +28,9 @@
 </ion-header>
 
 <div class="lottieContainer">
-  <div class=""></div>
-  <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+  <div class="" *ngIf="domIsLoaded == true"></div>
+  <ng-lottie [options]="options" (animationCreated)="animationCreated($event)" (configReady)="configReady()"
+    (dataReady)="dataReady()" (domLoaded)="domLoaded()"  (error)="error($event)"></ng-lottie>
 </div>
 
 <ion-content [fullscreen]="true">
@@ -64,7 +65,7 @@
               <ion-progress-bar value="0.5"></ion-progress-bar>
               <ion-item lines="none">
                 <ion-avatar slot="start">
-                  <img src="../../assets/">
+                  <img src="../../assets/json sequence/images/img_0.jpg">
                 </ion-avatar>
                 <ion-buttons>
                   <ion-button>
