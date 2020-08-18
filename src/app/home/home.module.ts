@@ -19,7 +19,7 @@ export function playerFactory() {
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    LottieModule.forRoot({ player: playerFactory })
+    LottieModule.forRoot({ player: playerFactory, useCache:true })
   ],
   declarations: [HomePage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

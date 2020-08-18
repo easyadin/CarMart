@@ -229,19 +229,18 @@ section {
 }
 
 .currentCount {
-  animation: scaleIn cubic-bezier(0.77, 0, 0.175, 1) 2s;
-  animation-delay: 1s;
+    animation: scaleIn cubic-bezier(0.77, 0, 0.175, 1) 8s;
 }
 
 @keyframes scaleIn {
   0% {
-    transform: scale(13.5);
+    transform: scale(18.5);
     opacity: 0;
   }
 
   100% {
-    transform: scale(0);
-    opacity: 1;
+    transform: initial;
+    opacity: 0.2;
   }
 }
 
@@ -255,4 +254,8 @@ section {
     transform: translate(0, 0);
     opacity: 1;
   }
+}
+
+* {
+  transition: transform 1s;
 }

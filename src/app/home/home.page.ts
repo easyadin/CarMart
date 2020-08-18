@@ -9,7 +9,13 @@ import { AnimationOptions } from 'ngx-lottie';
 })
 export class HomePage implements OnInit, OnDestroy {
   constructor() { }
-  ngOnInit(): void { }
+
+  toPlay = false;
+
+  ngOnInit(): void {
+
+
+  }
 
   domIsLoaded = false;
 
@@ -19,11 +25,13 @@ export class HomePage implements OnInit, OnDestroy {
 
   options: AnimationOptions = {
     path: '../../assets/json sequence/data.json',
-    autoplay: true,
+    autoplay: false
   };
 
   animationCreated(animationItem: AnimationItem): void {
     this.animationItem = animationItem;
+
+    this.animationItem.play()
   }
 
   configReady() {
@@ -37,7 +45,6 @@ export class HomePage implements OnInit, OnDestroy {
 
   domLoaded() {
     console.log("domLoaded")
-
   }
 
   error($event) {
